@@ -141,9 +141,10 @@ xmap ga <Plug>(LiveEasyAlign)
 nmap ga <Plug>(LiveEasyAlign)
 
 " Toggle Goyo
-nnoremap <C-g> :Goyo 66<CR>
+nnoremap <C-g> :Goyo 67<CR>
 autocmd! User GoyoEnter Limelight " Call Limelight automatically
 autocmd! User GoyoLeave Limelight!
+let g:limelight_conceal_ctermfg = 'gray'
 
 " Call Pencil if editing a .md file
 set nocompatible
@@ -163,3 +164,4 @@ augroup END
 
 command Documents :cd ~\Documents
 command Config :e ~\_gvimrc
+
