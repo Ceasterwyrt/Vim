@@ -37,6 +37,7 @@
 "                                                                              "
 "    1.1 GUI Language                                           *gui-language* "
 language en_GB
+set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,абцдефгхийклмнопѫрстувѧжыз;abcdefghijklmnopqrstuvwxyz
 
 "    1.2 Appearance                                               *appearance* "
 
@@ -113,6 +114,7 @@ nnoremap <C-l> :setlocal number! relativenumber!<CR>
 " GVIM on Windows needs to call vim-plug on _vimrc as well.
 
 call plug#begin('C:\tools\vim\vim91\plugged')
+" call plug#begin() # Uncomment this line if using Linux
 
 " Functionalities
 Plug 'junegunn/goyo.vim'
@@ -141,10 +143,9 @@ xmap ga <Plug>(LiveEasyAlign)
 nmap ga <Plug>(LiveEasyAlign)
 
 " Toggle Goyo
-nnoremap <C-g> :Goyo 67<CR>
+nnoremap <C-g> :Goyo 66<CR>
 autocmd! User GoyoEnter Limelight " Call Limelight automatically
 autocmd! User GoyoLeave Limelight!
-let g:limelight_conceal_ctermfg = 'gray'
 
 " Call Pencil if editing a .md file
 set nocompatible
@@ -163,5 +164,6 @@ augroup END
 " 5. Shortcuts                                                     *shortcuts* "
 
 command Documents :cd ~\Documents
+" command Documents :cd ~/Documents
 command Config :e ~\_gvimrc
-
+" command Config :e ~/.vim/vimrc
