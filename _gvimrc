@@ -1,136 +1,136 @@
-	" ============================================================================ "
-	"                                                                              "
-	" :++:   :++-   .+++=.                      :  -+-                             "
-	"  -@@:   =@@: -*++@@#                    +@-   @@:                            "
-	"   %@%    %@*     +@*                    @@:   @@:                            "
-	"   -@@:   -@@.    +@-:--   .--: --  --::-@@+:. @@: -=-       .-==. :::   :::. "
-	"    @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=-  %@+==*@@:   :-==*@@. =@% -++*  "
-	"    *@@    #@%    %=   @@-   -# -@%      %@-   %@:   +@% .%*    @@-  =@%-     "
-	"    -@@-   #@@-   #    -@%   == -@%      %@=   @@:   -@@ +@+    @@-   +@#     "
-	"     %@#  *.#@*  =:     #@+  *  :@@      %@=   @@-   -@% +@%    @@-  .=*@#    "
-	"     :@@+*= :@@*=-      .@@+=+  :@@      %@=   *@#   **. .%@*.  @%. .*  +@%.  "
-	"      -##+   -*#+        .#%@   =##-.    :*#:   =#*=-.     -*#+-:  -#=   -##: "
-	"                           =-                                                 "
-	"                     =#   ++                                                  "
-	"                     -#%*#-                                                   "
-	"                                                                              "
-	" This configuration file is still very much in development, but it's usable.  "
-	" Has Windows file paths.                                                      "
-	" ============================================================================ "
-	" CONTENTS                                                          *contents* "
-	"                                                                              "
-	" 1. New Defaults ............................................. |new-defaults| "
-	"    1.1 GUI Language ......................................... |gui-language| "
-	"    1.2 Appearance ............................................. |appearance| "
-	"    1.3 Functionality ....................................... |functionality| "
-	"    1.4 Searching ............................................... |searching| "
-	"    1.5 Clipboard ............................................... |clipboard| "
-	"    1.6 GVIM Specifics ..................................... |gvim-specifics| "
-	"    1.7 Justify ................................................... |justify| "
-	"    1.8 NetRW Config ......................................... |netrw-config| "
-	" 2. Rebinds ....................................................... |rebinds| "
-	" 3. Plugins ....................................................... |plugins| "
-	" 4. Plugin Tweaks ........................................... |plugin-tweaks| "
-	" 5. Shortcuts ................................................... |shortcuts| "
-	"                                                                              "
-	" ============================================================================ "
-	" 1. New Defaults                                               *new-defaults* "
-	"                                                                              "
-	"    1.1 GUI Language                                           *gui-language* "
-	language en_GB
-	set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,абцдефгхийклмнопѫрстувѧжыз;abcdefghijklmnopqrstuvwxyz
+" ============================================================================ "
+"                                                                              "
+" :++:   :++-   .+++=.                      :  -+-                             "
+"  -@@:   =@@: -*++@@#                    +@-   @@:                            "
+"   %@%    %@*     +@*                    @@:   @@:                            "
+"   -@@:   -@@.    +@-:--   .--: --  --::-@@+:. @@: -=-       .-==. :::   :::. "
+"    @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=-  %@+==*@@:   :-==*@@. =@% -++*  "
+"    *@@    #@%    %=   @@-   -# -@%      %@-   %@:   +@% .%*    @@-  =@%-     "
+"    -@@-   #@@-   #    -@%   == -@%      %@=   @@:   -@@ +@+    @@-   +@#     "
+"     %@#  *.#@*  =:     #@+  *  :@@      %@=   @@-   -@% +@%    @@-  .=*@#    "
+"     :@@+*= :@@*=-      .@@+=+  :@@      %@=   *@#   **. .%@*.  @%. .*  +@%.  "
+"      -##+   -*#+        .#%@   =##-.    :*#:   =#*=-.     -*#+-:  -#=   -##: "
+"                           =-                                                 "
+"                     =#   ++                                                  "
+"                     -#%*#-                                                   "
+"                                                                              "
+" This configuration file is still very much in development, but it's usable.  "
+" Has Windows file paths.                                                      "
+" ============================================================================ "
+" CONTENTS                                                          *contents* "
+"                                                                              "
+" 1. New Defaults ............................................. |new-defaults| "
+"    1.1 GUI Language ......................................... |gui-language| "
+"    1.2 Appearance ............................................. |appearance| "
+"    1.3 Functionality ....................................... |functionality| "
+"    1.4 Searching ............................................... |searching| "
+"    1.5 Clipboard ............................................... |clipboard| "
+"    1.6 GVIM Specifics ..................................... |gvim-specifics| "
+"    1.7 Justify ................................................... |justify| "
+"    1.8 NetRW Config ......................................... |netrw-config| "
+" 2. Rebinds ....................................................... |rebinds| "
+" 3. Plugins ....................................................... |plugins| "
+" 4. Plugin Tweaks ........................................... |plugin-tweaks| "
+" 5. Shortcuts ................................................... |shortcuts| "
+"                                                                              "
+" ============================================================================ "
+" 1. New Defaults                                               *new-defaults* "
+"                                                                              "
+"    1.1 GUI Language                                           *gui-language* "
+language en_GB
+set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,абцдефгхийклмнопѫрстувѧжыз;abcdefghijklmnopqrstuvwxyz
 
-	"    1.2 Appearance                                               *appearance* "
+"    1.2 Appearance                                               *appearance* "
 
-	set guifont=Inconsolata:h12 " Sets font
-	set linespace=0 " Sets the space between lines, if needed
+set guifont=Inconsolata:h12 " Sets font
+set linespace=0 " Sets the space between lines, if needed
 
-	"    1.3 Functionality                                         *functionality* "
-	set hidden " Enables switching buffers without saving
-	" set wrap " Makes it so lines break, instead of displaying a single long line
-	set tw=0 " Makes it so line breaks don't create new lines
-	set linebreak " Makes it so line breaks don't cutoff words
-	set so=5 " Sets scrolloff (bottom and top margin)
-	set nostartofline " Prevents single line movement from being too stiff
-	set relativenumber number " Displays line numbers and their relative position to the current line
-	let mapleader = " "
+"    1.3 Functionality                                         *functionality* "
+set hidden " Enables switching buffers without saving
+" set wrap " Makes it so lines break, instead of displaying a single long line
+set tw=0 " Makes it so line breaks don't create new lines
+set linebreak " Makes it so line breaks don't cutoff words
+set so=5 " Sets scrolloff (bottom and top margin)
+set nostartofline " Prevents single line movement from being too stiff
+set relativenumber number " Displays line numbers and their relative position to the current line
+let mapleader = " "
 
-	"    1.4 Searching                                                 *searching* "
-	set ignorecase " Ignore cases when searching by default
-	set smartcase " Unless uppercase is used
+"    1.4 Searching                                                 *searching* "
+set ignorecase " Ignore cases when searching by default
+set smartcase " Unless uppercase is used
 
-	"    1.5 Clipboard                                                 *clipboard* "
+"    1.5 Clipboard                                                 *clipboard* "
 
-	set clipboard=unnamed " Enables shared clipboard
+set clipboard=unnamed " Enables shared clipboard
 
-	"    1.6 GVIM Specifics                                       *gvim-specifics* "
-	set nobackup
-	set noundofile
-	set guioptions -=T " Hides the toolbar
-	set guioptions -=m " Hides the menubar
-	set guioptions -=r " Hides the right scrollbar
-	set guioptions -=L " Hides the left scrollbar
-	set guioptions -=b " Hides the bottom scrollbar
-	set columns=140 " Makes the default window size 140 characters wide
-	set lines=40 " Makes the default window size 40 characters tall
+"    1.6 GVIM Specifics                                       *gvim-specifics* "
+set nobackup
+set noundofile
+set guioptions -=T " Hides the toolbar
+set guioptions -=m " Hides the menubar
+set guioptions -=r " Hides the right scrollbar
+set guioptions -=L " Hides the left scrollbar
+set guioptions -=b " Hides the bottom scrollbar
+set columns=140 " Makes the default window size 140 characters wide
+set lines=40 " Makes the default window size 40 characters tall
 
-	"    1.7 Text Justifying                                     *text-justifying* "
-	packadd! justify " Package used to justify text
-	" Use 'Vgq' or 'gqq' to break a single long line.
-	" Then select the lines and use '_j' to justify.
-	" To undo, select the lines and use 'J' to join them back together.
+"    1.7 Text Justifying                                     *text-justifying* "
+packadd! justify " Package used to justify text
+" Use 'Vgq' or 'gqq' to break a single long line.
+" Then select the lines and use '_j' to justify.
+" To undo, select the lines and use 'J' to join them back together.
 
-	"    1.8 NetRW Config                                           *netrw-config* "
-	let g:netrw_keepdir = 0
-	let g:netrw_winsize = 30
-	let g:netrw_banner = 0
-	let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-	let g:netrw_localcopydircmd = 'cp -r'
-	hi! link netrwMarkFile Search
-	nnoremap <leader>dd :Lexplore %:p:h<CR>
-	nnoremap <Leader>da :Lexplore<CR>
+"    1.8 NetRW Config                                           *netrw-config* "
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 30
+let g:netrw_banner = 0
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_localcopydircmd = 'cp -r'
+hi! link netrwMarkFile Search
+nnoremap <leader>dd :Lexplore %:p:h<CR>
+nnoremap <Leader>da :Lexplore<CR>
 
-	function! NetrwMapping()
-	endfunction
+function! NetrwMapping()
+endfunction
 
-	augroup netrw_mapping
-	  autocmd!
-	  autocmd filetype netrw call NetrwMapping()
-	augroup END
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
 
-	function! NetrwMapping()
-	  nmap <buffer> H u
-	  nmap <buffer> h -^
-	  nmap <buffer> l <CR>
+function! NetrwMapping()
+  nmap <buffer> H u
+  nmap <buffer> h -^
+  nmap <buffer> l <CR>
 
-	  nmap <buffer> . gh
-	  nmap <buffer> P <C-w>z
+  nmap <buffer> . gh
+  nmap <buffer> P <C-w>z
 
-	  nmap <buffer> L <CR>:Lexplore<CR>
-	  nmap <buffer> <Leader>dd :Lexplore<CR>
-	endfunction
+  nmap <buffer> L <CR>:Lexplore<CR>
+  nmap <buffer> <Leader>dd :Lexplore<CR>
+endfunction
 
-	" ============================================================================ "
-	" 2. Rebinds                                                         *rebinds* "
+" ============================================================================ "
+" 2. Rebinds                                                         *rebinds* "
 
-	" Centralise screen on every search
-	nnoremap n nzt
-	nnoremap N Nzt
-	nnoremap * *zt
-	nnoremap # #zt
-	nnoremap g* g*zt
-	nnoremap g# g#zt
+" Centralise screen on every search
+nnoremap n nzt
+nnoremap N Nzt
+nnoremap * *zt
+nnoremap # #zt
+nnoremap g* g*zt
+nnoremap g# g#zt
 
-	" Remaps capital Y to copy the current line, without the line break at the end
-	nmap Y ^y$
+" Remaps capital Y to copy the current line, without the line break at the end
+nmap Y ^y$
 
-	" Movement keys work on single lines
-	noremap j gj
-	noremap k gk
+" Movement keys work on single lines
+noremap j gj
+noremap k gk
 
-	" Change buffer with Tab / Shift+Tab
-	nnoremap <silent> <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-	nnoremap <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+" Change buffer with Tab / Shift+Tab
+nnoremap <silent> <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 	" Create new file with Leader-n
 nnoremap <Leader>n :enew<CR>
