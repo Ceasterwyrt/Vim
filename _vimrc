@@ -37,11 +37,6 @@
 "    4.4 Vim Table ............................................... |vim-table| "
 "    4.5 Vim Startify ......................................... |vim-startify| "
 "    4.6 Easy Align ............................................. |easy-align| "
-"                                                                              "
-" ============================================================================ "
-" 1. New Defaults                                               *new-defaults* "
-"                                                                              "
-"    1.1 GUI Language                                           *gui-language* "
 
 language en_GB
 set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,абцдефгхийклмнопѫрстувѧжыз;abcdefghijklmnopqrstuvwxyz
@@ -341,3 +336,4 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
+
