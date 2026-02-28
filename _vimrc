@@ -46,6 +46,7 @@ set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNO
 
 set guifont=Inconsolata:h12 " Sets font
 set linespace=0 " Sets the space between lines, if needed
+set fillchars=eob:\ " Hide ~ from empty lines
 
 "    1.3 Functionality                                         *functionality* "
 
@@ -93,6 +94,7 @@ set guioptions -=L " Hides the left scrollbar
 set guioptions -=b " Hides the bottom scrollbar
 set columns=84 " Makes the default window size 84 characters wide
 set lines=40 " Makes the default window size 40 characters tall
+autocmd GUIEnter * simalt ~x " Fullscreen GVIM
 
 "    1.7 Text Justifying                                     *text-justifying* "
 
@@ -233,14 +235,18 @@ colorscheme happy_hacking
 "    4.2 Goyo                                                           *goyo* "
 
 " Set custom Goyo widths
-augroup GoyoWidths
-  autocmd!
-  autocmd FileType rst let g:goyo_width = 66
-  autocmd FileType *   let g:goyo_width = 80
-augroup END
+function! ToggleGoyo()
+  if &filetype ==# 'rst'
+    let g:goyo_width = 66
+  else
+    let g:goyo_width = 80
+  endif
+
+  Goyo
+endfunction
 
 " Open Goyo with Leader-g
-nnoremap <Leader>g :Goyo<CR>
+nnoremap <Leader>g :call ToggleGoyo()<CR>
 
 " Toggles numbers when entering Goyo
 autocmd! User GoyoEnter setlocal nonumber norelativenumber
@@ -336,5 +342,3 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
-
-
