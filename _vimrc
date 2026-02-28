@@ -128,7 +128,7 @@ function! NetrwMapping()
   nmap <buffer> l <CR><C-w>h
   " Open preview with l
   nmap <buffer> L <CR>:Lexplore<CR>
-  " Open and close netrw with L
+  " Open file and close netrw with L
 
   nmap <buffer> n %:w<CR>:buffer #<CR>
   " Create new file in current directory with n
@@ -336,4 +336,5 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
+
 
