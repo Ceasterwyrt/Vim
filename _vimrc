@@ -109,7 +109,6 @@ xnoremap <Leader>J :s/\s\+/ /g<CR>
 let g:netrw_keepdir = 0 " Changes current directory when browsing
 let g:netrw_winsize = 30 " Set to use 30% of screen
 let g:netrw_banner = 0 " Disable banner
-let g:netrw_liststyle = 3 " Show parent folder
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " Hide hidden files
 let g:netrw_localcopydircmd = 'cp -r' " Copy recursively
 nnoremap <leader>dd :Lexplore %:p:h<CR>
@@ -343,4 +342,5 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
+
 
