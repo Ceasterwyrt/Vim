@@ -1,33 +1,3 @@
-" ============================================================================ "
-"                                                                              "
-" :++:   :++-   .+++=.                      :  -+-                             "
-"  -@@:   =@@: -*++@@#                    +@-   @@:                            "
-"   %@%    %@*     +@*                    @@:   @@:                            "
-"   -@@:   -@@.    +@-:--   .--: --  --::-@@+:. @@: -=-       .-==. :::   :::. "
-"    @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=-  %@+==*@@:   :-==*@@. =@% -++*  "
-"    *@@    #@%    %=   @@-   -# -@%      %@-   %@:   +@% .%*    @@-  =@%-     "
-"    -@@-   #@@-   #    -@%   == -@%      %@=   @@:   -@@ +@+    @@-   +@#     "
-"     %@#  *.#@*  =:     #@+  *  :@@      %@=   @@-   -@% +@%    @@-  .=*@#    "
-"     :@@+*= :@@*=-      .@@+=+  :@@      %@=   *@#   **. .%@*.  @%. .*  +@%.  "
-"      -##+   -*#+        .#%@   =##-.    :*#:   =#*=-.     -*#+-:  -#=   -##: "
-"                           =-                                                 "
-"                     =#   ++                                                  "
-"                     -#%*#-                                                   "
-"                                                                              "
-" This configuration file is still very much in development, but it's usable.  "
-" Has Windows file paths.                                                      "
-" ============================================================================ "
-" CONTENTS                                                          *contents* "
-"                                                                              "
-" 1. New Defaults ............................................. |new-defaults| "
-"    1.1 GUI Language ......................................... |gui-language| "
-"    1.2 Appearance ............................................. |appearance| "
-"    1.3 Functionality ....................................... |functionality| "
-"    1.4 Searching ............................................... |searching| "
-"    1.5 Clipboard ............................................... |clipboard| "
-"    1.6 GVIM Specifics ..................................... |gvim-specifics| "
-"    1.7 Justify ................................................... |justify| "
-"    1.8 NetRW Config ......................................... |netrw-config| "
 " 2. Rebinds ....................................................... |rebinds| "
 " 3. Plugins ....................................................... |plugins| "
 " 4. Plugin Tweaks ........................................... |plugin-tweaks| "
@@ -125,8 +95,8 @@ augroup END
 
 " Rebinds a lot of common NetRW keybinds to vim keys
 function! NetrwMapping()
-  nmap <buffer> H u
-  nmap <buffer> h -^
+  nmap <buffer> h u
+  nmap <buffer> H -^
   nmap <buffer> l <CR><C-w>h
   " Open preview with l
   nmap <buffer> L <CR>:Lexplore<CR>
@@ -222,6 +192,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/lilydjwg/colorizer'
+" Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -260,7 +231,7 @@ autocmd! User GoyoLeave setlocal number relativenumber
 let g:pencil#wrapModeDefault = 'hard'
 " Creates new lines instead of a long line
 let g:pencil#autoformat = 0
-" Disables joining lines together (needed for RST)
+" Auto wraps after textwidth
 let g:pencil#textwidth = 66
 
 " Call Pencil if editing a .rst file
@@ -343,5 +314,7 @@ xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
 
+" Airline
 
-
+let g:airline_theme='dark'
+let g:airline_symbols_ascii = 1
