@@ -259,8 +259,8 @@ autocmd! User GoyoLeave setlocal number relativenumber
 
 let g:pencil#wrapModeDefault = 'hard'
 " Creates new lines instead of a long line
-let g:pencil#autoformat = 1
-" Auto wraps after textwidth
+let g:pencil#autoformat = 0
+" Disables joining lines together (needed for RST)
 let g:pencil#textwidth = 66
 
 " Call Pencil if editing a .rst file
@@ -342,5 +342,6 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
+
 
 
