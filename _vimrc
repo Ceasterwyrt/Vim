@@ -41,6 +41,8 @@
 " ============================================================================ "
 " 1. New Defaults                                               *new-defaults* "
 
+"    1.1 GUI Language                                           *gui-language* "
+
 language en_GB
 set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,абцдефгхийклмнопѫрстувѧжыз;abcdefghijklmnopqrstuvwxyz
 " This is so I can use my custom cyrillic keyboard to navigate around
@@ -225,7 +227,6 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/lilydjwg/colorizer'
-" Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -346,8 +347,3 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
-
-" Airline
-
-let g:airline_theme='dark'
-let g:airline_symbols_ascii = 1
