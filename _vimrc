@@ -185,9 +185,17 @@ nnoremap <Leader>l :setlocal number! relativenumber!<CR>
 " Toggle spellcheck with Leader-ss
 nnoremap <Leader>ss :setlocal spell!<CR>
 
-" Select word from spellchecker with Leader-sc and move with Leader-SC
+" Spelling rebinds
+" Select replacement for misspelled word
 nnoremap <leader>sc z=
-nnoremap <leader>sC ]s
+" Go to next misspelled word
+nnoremap <leader>sn ]s
+" Go to previous misspelled word
+nnoremap <leader>sN [s
+" Add word to spellfile
+nnoremap <leader>sa zg
+" Remove word from spellfile
+nnoremap <leader>sd zug
 
 " Insert math expression result with Leader-c
 nnoremap <Leader>c a<C-r>=
@@ -227,6 +235,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/lilydjwg/colorizer'
+" Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -347,3 +356,8 @@ nnoremap <Leader>bq :SClose<CR>
 xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
+
+" Airline
+
+let g:airline_theme='dark'
+let g:airline_symbols_ascii = 1
