@@ -52,6 +52,8 @@ set langmap=АБЦДЕФГХИЙКЛМНОПѪРСТУВѦЖЫЗ;ABCDEFGHIJKLMNO
 set guifont=Inconsolata:h12 " Sets font
 set linespace=0 " Sets the space between lines, if needed
 set fillchars=eob:\ " Hide ~ from empty lines
+set hlsearch " Highlight searches
+set termguicolors " My colourscheme is 256 colours only
 
 "    1.3 Functionality                                         *functionality* "
 
@@ -64,6 +66,8 @@ set so=5 " Sets scrolloff (bottom and top margin)
 set nostartofline " Prevents single line movement from being too stiff
 set relativenumber number " Displays line numbers and their relative position to the current line
 let mapleader = " " " Sets leader to the space key
+set noshowmode " Hides the mode (redundant because of airline)
+set shortmess+=F " Hides the file name (redundant because of airline)
 
 " Open help files vertically
 augroup vimrc_help
@@ -201,12 +205,14 @@ nnoremap <leader>sd zug
 nnoremap <Leader>c a<C-r>=
 
 " Pasting doesn't store deleted text, only if used with Leader
-xnoremap p "_dP
-xnoremap P "_dp
 nnoremap <Leader>p p
 nnoremap <Leader>P P
 xnoremap <Leader>p p
 xnoremap <Leader>P P
+
+" Useful binds for colorscheme creation
+" nnoremap <leader>h :echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')<CR>
+" nnoremap <leader>H :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
 
 " ============================================================================ "
 " 3. Plugins                                                         *plugins* "
@@ -216,8 +222,7 @@ call plug#begin('C:\tools\vim\vim91\plugged')
 
 " Colourschemes
 
-Plug 'https://gitlab.com/yorickpeterse/happy_hacking.vim.git'
-Plug 'yorickpeterse/vim-paper'
+Plug 'Ceasterwyrt/Wyrtehiw'
 
 " Writing Plugins
 
@@ -235,7 +240,8 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/lilydjwg/colorizer'
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'rpdelaney/vim-sourcecfg'
 
 call plug#end()
 
@@ -244,7 +250,7 @@ call plug#end()
 
 "    4.1 Colourscheme                                          *colourschemes* "
 
-colorscheme happy_hacking
+colorscheme wyrtehiw
 
 "    4.2 Goyo                                                           *goyo* "
 
@@ -306,7 +312,7 @@ inoreabbrev <expr> __
 
 "    4.5 Vim Startify                                           *vim-startify* "
 
-let g:startify_custom_header = 'startify#center(g:ascii)'
+let g:startify_custom_header = 'startify#pad(g:ascii)'
 
 let g:ascii = [
 \ ':++:   :++-   .+++=.                      :  -+-                           ',
@@ -357,7 +363,11 @@ xmap ga <Plug>(LiveEasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
 
-" Airline
+"    4.7 Vim Airline
 
-let g:airline_theme='dark'
+let g:airline_theme='wyrtehiw'
 let g:airline_symbols_ascii = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#extensions#wordcount#filetypes = ['rst']
