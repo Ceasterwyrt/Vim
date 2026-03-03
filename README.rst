@@ -1,8 +1,10 @@
 Vim configuration file
 ======================
 
-Using it on Linux
------------------
+Using it on Unix Systems
+------------------------
+
+You probably dont't need this anymore, but I'll keep it here just in case.
 
 I had to convert the configuration file inside vim itself, using the following command::
 
