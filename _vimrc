@@ -77,13 +77,13 @@ augroup vimrc_help
 augroup END
 
 " Swap, backup and undofile, make sure to change paths if not using Windows
-set directory=~\vimfiles\Swap\
+set directory=~\vimfiles\swap\
 call mkdir(&directory, "p")
 set backup
-set backupdir=~\vimfiles\Backup\\
+set backupdir=~\vimfiles\backup\\
 call mkdir(&backupdir, "p")
 set undofile
-set undodir=~\vimfiles\Undo
+set undodir=~\vimfiles\undo
 call mkdir(&undodir, "p")
 
 "    1.4 Searching                                                 *searching* "
