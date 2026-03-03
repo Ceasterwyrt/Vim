@@ -190,6 +190,9 @@ nnoremap <Leader>l :setlocal number! relativenumber!<CR>
 " Toggle spellcheck with Leader-ss
 nnoremap <Leader>ss :setlocal spell!<CR>
 
+" Clear search highlight
+nnoremap <leader>/ :let @/ = ""<CR>
+
 " Spelling rebinds
 " Select replacement for misspelled word
 nnoremap <leader>sc z=
