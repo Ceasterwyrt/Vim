@@ -175,8 +175,8 @@ noremap k gk
 " Change buffer with Tab / Shift-Tab, and close with Leader-q and Leader-Q
 nnoremap <silent> <tab> :update<CR>:bnext<CR>
 nnoremap <silent> <s-tab> :update<CR>:bprevious<CR>
-nnoremap <silent> <Leader>q :update<CR>:bnext<CR>:bdelete #<CR>
-nnoremap <silent> <Leader>Q :bnext<CR>:bdelete! #<CR>
+nnoremap <silent> <Leader>q :update<CR>:Startify<CR>:bdelete #<CR>
+nnoremap <silent> <Leader>Q :Startify<CR>:bdelete! #<CR>
 
 " Create new file with Leader-n
 nnoremap <Leader>n :enew<CR>
@@ -243,7 +243,7 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-startify'
-Plug 'https://github.com/lilydjwg/colorizer'
+Plug 'lilydjwg/colorizer'
 Plug 'vim-airline/vim-airline'
 Plug 'rpdelaney/vim-sourcecfg'
 
@@ -319,20 +319,19 @@ inoreabbrev <expr> __
 let g:startify_custom_header = 'startify#pad(g:ascii)'
 
 let g:ascii = [
-\ ':++:   :++-   .+++=.                      :  -+-                           ',
-\ '-@@:   =@@: -*++@@#                    +@-   @@:                           ',
-\ ' %@%    %@*     +@*                    @@:   @@:                           ',
-\ ' -@@:   -@@.    +@-:--   .--: --  --::-@@+:. @@: -=-       .-==. :::   :::.',
-\ '  @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=-  %@+==*@@:   :-==*@@. =@% -++* ',
-\ '  *@@    #@%    %=   @@-   -# -@%      %@-   %@:   +@% .%*    @@-  =@%-    ',
-\ '  -@@-   #@@-   #    -@%   == -@%      %@=   @@:   -@@ +@+    @@-   +@#    ',
-\ '   %@#  *.#@*  =:     #@+  *  :@@      %@=   @@-   -@% +@%    @@-  .=*@#   ',
-\ '   :@@+*= :@@*=-      .@@+=+  :@@      %@=   *@#   **. .%@*.  @%. .*  +@%. ',
-\ '    -##+   -*#+        .#%@   =##-.    :*#:   =#*=-.     -*#+-:  -#=   -##:',
-\ '                         =-                                                ',
-\ '                   =#   ++                                                 ',
-\ '                   -#%*#-                                                  ',
-\ '                                                                           ',
+\ '           ##**            ++:   :++-   .+++=.                        ',
+\ '          *##**#*          @@:   =@@: -*++@@#                    +@-  ',
+\ '         ***#**#*          %@%    %@*     +@*                    @@:  ',
+\ '    ###* **#*##*#-#*###*#  -@@:   -@@.    +@-:--   .--: --  --::-@@+:.',
+\ ' ####*#*##################  @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=- ',
+\ ' ###*######-----**######*   *@@    #@%    %=   @@-   -# -@%      %@-  ',
+\ '  ****#####-:----###*##     -@@-   #@@-   #    -@%   == -@%      %@=  ',
+\ '    ****-##---:---##*        %@#  *.#@*  =:     #@+  *  :@@      %@=  ',
+\ '      *####**--*******       :@@+*= :@@*=-      .@@+=+  :@@      %@=  ',
+\ '     ***###***-***#####       -##+   -*#+        .#%@   =##-.    :*#: ',
+\ '      ******** ***#####                            =-                 ',
+\ '      *******    #*####                      =#   ++                  ',
+\ '      **##                                   -#%*#-                   ',
 \]
 
 let g:startify_lists = [
