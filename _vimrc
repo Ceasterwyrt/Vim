@@ -215,8 +215,8 @@ xnoremap <Leader>p p
 xnoremap <Leader>P P
 
 " Useful binds for colorscheme creation
-" nnoremap <leader>h :echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')<CR>
-" nnoremap <leader>H :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
+nnoremap <leader>h :echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')<CR>
+nnoremap <leader>H :echo synIDattr(synID(line('.'), col('.'), 1), 'name')<CR>
 
 " ============================================================================ "
 " 3. Plugins                                                         *plugins* "
@@ -342,12 +342,15 @@ let g:startify_lists = [
         \ ]
 
 let g:startify_files_number = 6
-let g:startify_custom_indices = ['1', '2', '3', '4', '5', '6']
+let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
 let g:startify_session_delete_buffers = 1
+let g:startify_session_persistence = 0
+let g:startify_change_to_dir = 1
 let g:startify_padding_left = 4
 
 let g:startify_bookmarks = [
 \ { 'c': 'C:\tools\vim\_vimrc' },
+\ { 'a': 'A:\Archiv' },
 \ ]
 
 " Open Startify with Leader-Enter
