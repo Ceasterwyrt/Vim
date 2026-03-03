@@ -369,6 +369,7 @@ nmap ga <Plug>(LiveEasyAlign)
 let g:airline_theme='wyrtehiw'
 let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#wordcount#filetypes = ['rst']
