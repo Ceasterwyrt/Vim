@@ -290,7 +290,7 @@ let g:pencil#textwidth = 66
 " Call Pencil if editing a .rst file
 augroup pencil
   autocmd!
-autocmd FileType rst Pencil | setlocal spell spelllang=en_gb textwidth=66 wrap linebreak
+autocmd FileType rst Pencil | setlocal spelllang=en_gb textwidth=66 wrap linebreak
 augroup END
 
 "    4.4 Vim Table                                                 *vim-table* "
@@ -319,19 +319,7 @@ inoreabbrev <expr> __
 let g:startify_custom_header = 'startify#pad(g:ascii)'
 
 let g:ascii = [
-\ '           ##**            ++:   :++-   .+++=.                        ',
-\ '          *##**#*          @@:   =@@: -*++@@#                    +@-  ',
-\ '         ***#**#*          %@%    %@*     +@*                    @@:  ',
-\ '    ###* **#*##*#-#*###*#  -@@:   -@@.    +@-:--   .--: --  --::-@@+:.',
-\ ' ####*#*##################  @@*    @@+    *@  #@* :==%@ +@#=+*..:%@=- ',
-\ ' ###*######-----**######*   *@@    #@%    %=   @@-   -# -@%      %@-  ',
-\ '  ****#####-:----###*##     -@@-   #@@-   #    -@%   == -@%      %@=  ',
-\ '    ****-##---:---##*        %@#  *.#@*  =:     #@+  *  :@@      %@=  ',
-\ '      *####**--*******       :@@+*= :@@*=-      .@@+=+  :@@      %@=  ',
-\ '     ***###***-***#####       -##+   -*#+        .#%@   =##-.    :*#: ',
-\ '      ******** ***#####                            =-                 ',
-\ '      *******    #*####                      =#   ++                  ',
-\ '      **##                                   -#%*#-                   ',
+\ 'Press a key to start:',
 \]
 
 let g:startify_lists = [
@@ -349,8 +337,9 @@ let g:startify_change_to_dir = 1
 let g:startify_padding_left = 4
 
 let g:startify_bookmarks = [
-\ { 'c': 'C:\tools\vim\_vimrc' },
+\ { 'c': 'C:\Program Files\vim\_vimrc' },
 \ { 'a': 'A:\Archiv' },
+\ { 'f': 'A:\Archiv\6. Hausaufgaben\College\Semester.rst' },
 \ ]
 
 " Open Startify with Leader-Enter
