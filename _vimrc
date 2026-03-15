@@ -69,6 +69,8 @@ set relativenumber number " Displays line numbers and their relative position to
 let mapleader = " " " Sets leader to the space key
 set noshowmode " Hides the mode (redundant because of airline)
 set shortmess+=F " Hides the file name (redundant because of airline)
+set expandtab " Needed for justify, otherwise it uses tabs
+set softtabstop=2 " Tabs are two spaces
 
 " Open help files vertically
 augroup vimrc_help
